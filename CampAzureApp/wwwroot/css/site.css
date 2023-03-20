@@ -1,0 +1,87 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#success {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 28px;
+    color: lightseagreen;
+}
+
+.back-button {
+    padding: 10px !important;
+    color: white !important;
+    background-color: #009578 !important;
+    border: 1px solid black !important;
+    border-radius: 5px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    margin-right: 1rem !important;
+    font-size: medium;
+}
+
+.document-upload-form {
+    display: flex;
+    grid-gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.document-upload-form__input {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-button {
+    padding: 10px;
+    color: white;
+    background-color: #009578;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: #00b28f;
+}
+
+.custom-text {
+    margin-top: 2px;
+}
+
+.label-text {
+    font-family: sans-serif;
+    color: #aaa;
+}
+
+#File {
+    visibility: hidden;
+    display: none;
+}
+
+#UserEmail {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+#submit-form-button:disabled {
+    background-color: #73a5ef;
+    border-color: #73a5ef;
+}

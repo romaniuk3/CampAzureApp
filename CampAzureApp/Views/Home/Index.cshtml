@@ -1,0 +1,38 @@
+﻿@model CampAzureApp.Models.FileModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    if(ViewBag.SuccessMessage == null) 
+    {
+        <div>
+            <h1>Upload your file here</h1>
+
+            @using (Html.BeginForm("SaveFile", "Home", FormMethod.Post, new { enctype = "multipart/form-data", @class = "document-upload-form" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="document-upload-form__input">
+                    @Html.EditorFor(m => m.File, new { htmlAttributes = new {accept=".docx"} })
+                    <button type="button" class="custom-button">CHOOSE A DOCUMENT</button>
+                    <span class="custom-text label-text">You haven't chosen a document, yet</span>
+                </div>
+                <div>
+                    @Html.LabelFor(m => m.UserEmail, "Email", new {@class="email-input label-text"})
+                    @Html.EditorFor(m => m.UserEmail, new { htmlAttributes = new { placeholder = "example@gmail.com" } })
+                </div>
+                <button class="btn btn-primary" id="submit-form-button" disabled>Submit</button>
+            }
+        </div>
+    }
+
+}
+
+@{
+    if (ViewBag.SuccessMessage != null)
+    {
+        <a class="navbar-brand back-button" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
+    <div>
+             <p id="success">@ViewBag.SuccessMessage</p>
+    </div>
+    }
+}

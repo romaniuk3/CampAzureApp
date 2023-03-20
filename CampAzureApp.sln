@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampAzureApp", "CampAzureApp\CampAzureApp.csproj", "{5662B929-CDBC-4560-ABF8-41B546CD8A4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlobTriggerFunction", "BlobTriggerFunction\BlobTriggerFunction.csproj", "{868B112B-DA71-435F-B948-17BB11D4C52C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5662B929-CDBC-4560-ABF8-41B546CD8A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5662B929-CDBC-4560-ABF8-41B546CD8A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5662B929-CDBC-4560-ABF8-41B546CD8A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5662B929-CDBC-4560-ABF8-41B546CD8A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{868B112B-DA71-435F-B948-17BB11D4C52C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{868B112B-DA71-435F-B948-17BB11D4C52C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{868B112B-DA71-435F-B948-17BB11D4C52C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{868B112B-DA71-435F-B948-17BB11D4C52C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83D30E83-2026-4E01-A8C5-B1342C0A9221}
+	EndGlobalSection
+EndGlobal
