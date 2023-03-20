@@ -24,15 +24,16 @@ namespace BlobTriggerFunction
 
             if (userEmail != null)
             {
-                var apiKey = Environment.GetEnvironmentVariable("SEND_GRID_API_KEY");
-                var client = new SendGridClient(apiKey);
-                var from = new EmailAddress("dakakmadak@gmail.com", "Vova");
+                var apiKey = Environment.GetEnvironmentVariable("SENDGRID_API_KEY");
+                log.LogInformation("API KEY " + apiKey);
+                /*var client = new SendGridClient(apiKey);
+                var from = new EmailAddress("jackyharlow27@gmail.com", "Vova");
                 var subject = "The file was successfully uploaded";
                 var to = new EmailAddress(userEmail, "Hello");
                 var plainTextContent = "Your file was successfully uploaded to our Blob Storage. Thank you for using our service.";
                 var htmlContent = "<strong>Your file was successfully uploaded to our Blob Storage. Thank you for using our service. :)</strong>";
                 var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
-                client.SendEmailAsync(msg);
+                client.SendEmailAsync(msg);*/
             }
         }
     }

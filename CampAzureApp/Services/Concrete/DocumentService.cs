@@ -25,7 +25,8 @@ namespace CampAzureApp.Services.Concrete
                 _azureOptions.Container
                 );
 
-            SetMetadata(blobContainerClient, userEmail);
+            Dictionary<string, string> metadata = new Dictionary<string, string>();
+            metadata.Add("email", userEmail);
 
             var uniqueName = Guid.NewGuid().ToString() + fileExtension;
             BlobClient blobClient = blobContainerClient.GetBlobClient(uniqueName);
@@ -35,17 +36,9 @@ namespace CampAzureApp.Services.Concrete
                 HttpHeaders = new BlobHttpHeaders
                 {
                     ContentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                }
+                },
+                Metadata = metadata
             }, cancellationToken: default);
-        }
-
-        private void SetMetadata(BlobContainerClient container, string userEmail)
-        {
-            container.SetMetadata(new Dictionary<string, string>());
-
-            Dictionary<string, string> metadata = new Dictionary<string, string>(2);
-            metadata.Add("email", userEmail);
-            container.SetMetadata(metadata);
         }
     }
 }
