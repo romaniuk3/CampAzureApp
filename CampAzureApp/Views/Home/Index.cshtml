@@ -32,7 +32,11 @@
     {
         <a class="navbar-brand back-button" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
     <div>
-             <p id="success">@ViewBag.SuccessMessage</p>
+            <p id="success">
+                @ViewBag.SuccessMessage
+                <br/>
+                It might take up to 5 minutes
+            </p>
     </div>
     }
 }
